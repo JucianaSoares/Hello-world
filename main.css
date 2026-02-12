@@ -1,9 +1,11 @@
-.container{display: flex;
+.container {
+  display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url("wall.png");
+  background-image: url("wall.png"); / corrigido /
   margin: auto;
 }
+
 body{
   font-family: 'Press Start 2P', cursive;
   text-align: center;
@@ -33,16 +35,18 @@ h3{font-size: 25px;}
   
   
 }
-.square{height: 150px;
+.square {
+  height: 150px;
   width: 150px;
   border: 1px solid black;
   background-color: #1aeaa5;
-  background-image: url("wall.png");
+  background-image: url("wall.png"); / corrigido /
 }
-.enemy{
-  background-image: url("ralph.png");
+.enemy {
+  background-image: url("ralph.png"); / corrigido /
   background-color: #121214;
   background-size: cover;
+}
 }
 .menu-lives{
   display: flex;
