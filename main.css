@@ -1,0 +1,420 @@
+.container{display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../Imagens/wall.png");
+  margin: auto;
+}
+body{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin: 2px;
+}
+h3{font-size: 25px;}
+
+#score, #time-left{
+  font-weight: bold;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+.menu{display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90px;
+  width: 100%;
+  background-color: black;
+  color: #ffffff;
+  border-bottom: 5px solid goldenrod;
+}
+.panel{margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.square{height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  background-color: #1aeaa5;
+  background-image: url("../Imagens/wall.png");
+}
+.enemy{
+  background-image: url("../Imagens/ralph.png");
+  background-color: #121214;
+  background-size: cover;
+}
+.menu-lives{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2){
+  margin-top: 1rem;
+}
+#lista-pontos{
+  margin-top: 25px;
+  padding: 10px;
+  background-image: url("../Imagens/wall.png");
+  color: #080707;
+  border-radius: 8px;
+  font-size: 30px;
+  width: 500px;
+  height: 400px;
+  margin: 80px;
+  line-height: 1.6;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 100%;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+#high-score{
+  color: #6D9D82;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 35px;
+  font-size: 25px;
+  font-weight: bold;
+  height: 150px;
+  
+}
+ #limpar-historico{font-size: 20px;}
+
+ #painel-controles{
+   padding: 15px;
+   margin-bottom: 20px;
+   border-radius: 8px;
+   text-align: center;
+   box-shadow: 0 2px 6px rgba(0, 0,0,0.2);
+ }
+ #player-name{
+   padding: 6px;
+   margin: 8px;
+   padding: 10px 15px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   cursor: pointer;
+   
+   font-size: 15px;
+ }
+ #painel-controles button{
+   margin: 5px;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-weight: bold;
+   transition: 0.3s;
+ }
+ #novo-jogo{
+   background-color: #4CAF50;
+color: white;
+font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px auto;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+ }
+ #novo-jogo:hover{
+   background-color: #45a049;
+   transform: scale(1.1);
+}
+ #toggle-music{
+   background-color: #2196F3;
+   color: white;
+ }
+ #toggle-music:hover{
+   background-color: #1976D2;
+ }
+ #facil{
+   background-color: #8BC34A;
+   color: white;
+   font-family: 'Press Start 2P', cursive;
+  padding: 10px 20px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+ }
+ #facil:hover{
+   background-color: #689F38;
+   transform: scale(1.1);
+ }
+#medio{
+  background-color: #FFC107;
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+  padding: 10px 20px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+#medio:hover{
+  background-color: #FFA000;
+  transform: scale(1.1);
+}
+#dificil{
+  background-color: #F44336;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  padding: 10px 20px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+#dificil:hover{
+  background-color:#D32F2F ;
+  transform: scale(1.1);
+}
+#painel-mensagem{
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+#start-game {
+  background-color: #ffcc00;   /* amarelo chamativo */
+  color: #000;
+  font-family: 'Press Start 2P', cursive; /* mesma fonte retrô */
+  font-size: 16px;
+  padding: 12px 24px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: transform 0.2s, background-color 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+   animation: pulse 1.5s infinite;
+}
+
+
+#start-game:hover {
+  background-color: #ff9900;   /* laranja ao passar o mouse */
+  transform: scale(1.1);       /* efeito de zoom */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 10px rgba(255, 204, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7);
+  }
+}
+
+#ranking{
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  background:#fff;
+  box-shadow: 0 2px 6px rgba(0, 0,0,0.1);
+}
+#ranking th,
+#ranking td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#ranking th{
+  background-color: #3498db;
+  color: white;
+  text-transform: uppercase;
+}
+.ouro{
+  background-color: #ffd700;
+  font-weight: bold;
+  color: #000;
+  animation: pulse 2s infinite;
+}
+.prata{
+  background-color: #c0c0c0;
+  font-weight: bold;
+  color: #000;
+  animation: pulse 1.5s infinite;
+}
+.bronze{
+  background-color: #cd7f32;
+  font-weight: bold;
+color: #fff;
+  animation: pulse 1s infinite;
+  
+}
+
+button{
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px; 
+  
+}
+button:hover{
+  background-color: #2980b9;
+}
+h3{color: #998F8F;}
+
+#painel-mensagem{
+ font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  min-height: 60px;
+}
+#painel-mensagem.facil {
+  background-color: #4CAF50;
+  color: #fff;
+  animation: pulse 2s infinite;
+}
+#painel-mensagem.medio {
+  background-color: #ffcc00;
+  color: #000;
+  animation: pulse 1.5s infinite;
+}
+#painel-mensagem.dificil {
+  background-color: #e53935;
+  color: #fff;
+  animation: pulse 1s infinite;
+}
+.mensagem{
+  opacity: 0;
+  animation: fadeInOut 4s ease-in-out forwards;
+  transition: opacity 0.5s ease;
+  color: #043D19;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+  animation: pulse 2s infinite; 
+  }
+  @keyframes fadeInOut{
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+
+.mensagem-visivel{opacity: 1;}
+
+@keyframes fadeInHighligth{
+  0%{background-color: #ffeaa7; opacity: 0;}
+50%{background-color: #ffeaa7;
+  opacity: 1;}
+  100%{background-color: inherit;
+    opacity: 1;}
+  }
+  .ranking-update{
+    opacity: 0;
+  transform: translateY(-10px);
+    animation:fadeInHighligth 2s ease;
+    animation: fadeIn 0.8s forwards;
+  }
+  @keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    /* Classe para desaparecer suavemente */
+.ranking-fadeout {
+  opacity: 1;
+  animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+/* Classe para desaparecer suavemente */
+.mensagem.fadeout {
+  opacity: 0;
+  animation: fadeOutMsg 1s forwards;
+}
+.mensagem.fadein{opacity: 1;}
+
+@keyframes fadeOutMsg {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+/* Mensagem de Game Over */
+.gameover {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  padding: 14px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  background-color: #e53935;
+  animation: blinkRed 1s infinite,;
+}
+/* Fade-out suave */
+.gameover.fadeout {
+  opacity: 1;
+  animation: fadeOutMsg 1.2s forwards;
+}
+@keyframes blinkRed {
+  0%, 100% {
+    background-color: #e53935;
+    color: #fff;
+  }
+  50% {
+    background-color: #000;
+    color: #e53935;}
+}
+@keyframes fadeOutMsg {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  #ranking tbody tr:nth-child(1) {
+  background-color: #ffd700;
+  font-weight: bold;
+  }
+  #ranking tbody tr:nth-child(2){
+    background-color: #c0c0c0;
+    font-weight: bold;
+  }
+  #ranking tbody tr:nth-child(3){
+    background-color: #cd7f32;
+    font-weight: bold;
+  }

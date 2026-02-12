@@ -1,0 +1,21 @@
+{
+  "name": "Whac-A-Ralph",
+  "short_name": "RalphGame",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "SRC/Imagens/ralph.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "SRC/Imagens/ralph.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
