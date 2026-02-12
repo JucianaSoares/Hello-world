@@ -242,7 +242,15 @@ function initialize() {
 }
 
 document.getElementById("limpar-historico").addEventListener("click", limparHistorico);
-document.getElementById("novo-jogo").addEventListener("click", novoJogo);
+document.getElementById("novo-jogo").addEventListener("click", () => {
+  novoJogo();
+  backgroundMusic.play().then(() => {
+    musicPlaying = true;
+    state.view.toggleMusicBtn.textContent = "🎵 Música";
+  }).catch(() => {
+    console.log("Clique necessário para iniciar a música.");
+  });
+});
 state.view.toggleMusicBtn.addEventListener("click", toggleMusic);
 document.getElementById("facil").addEventListener("click", () => setDifficulty("facil"));
 document.getElementById("medio").addEventListener("click", () => setDifficulty("medio"));
