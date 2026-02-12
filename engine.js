@@ -192,7 +192,6 @@ function limparHistorico() {
     state.view.ranking.innerHTML = "";
   }, 800);
 }
-
 function novoJogo() {
   const playerName = state.view.playerNameInput.value || "Jogador";
   Object.assign(state.values, { result: 0, currentTime: 120, gameOver: false });
@@ -205,7 +204,8 @@ function novoJogo() {
   moveEnemy();
   state.actions.countDownTimerId = setInterval(countDown, 1000);
 
-   startBackgroundMusic();
+  // ✅ Sempre inicia a música ao clicar em Novo Jogo
+  startBackgroundMusic();
 
   const msg = document.createElement("div");
   msg.classList.add("mensagem");
