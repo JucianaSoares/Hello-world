@@ -205,7 +205,7 @@ function novoJogo() {
   moveEnemy();
   state.actions.countDownTimerId = setInterval(countDown, 1000);
 
-  if (!musicPlaying) startBackgroundMusic();
+   startBackgroundMusic();
 
   const msg = document.createElement("div");
   msg.classList.add("mensagem");
