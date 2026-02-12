@@ -1,2 +1,2 @@
 # Hello-world
-Desafio Trilha de CSS concluído 
+repositório para fins didáticos 
