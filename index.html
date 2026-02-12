@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
-  <!-- settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detona Ralph Game</title>
@@ -12,15 +9,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
-  
-<link rel="manifest" href="manifest.json">
+
+  <!-- manifest -->
+  <link rel="manifest" href="manifest.json">
+
   <!-- styles -->
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-
   <div class="container">
     <div class="menu">
       <div class="menu-time">
@@ -36,64 +33,62 @@
         <h2>x3</h2>
       </div>
     </div>
-    <div id="painel-controles">
-<div>Nome do Jogador: <input type="text" id="player-name" placeholder="Enter your Name">
-<button id="start-game">▶️ Start Game</button>
-<button id="novo-jogo">Novo Jogo</button>
-<button id="toggle-music">Ligar/desligar Música</button>
-<button id="facil">Modo Fácil</button>
-<button id="medio">Modo Médio</button>
-<button id="dificil">Modo Difícil</button>
 
-</div>
-</div>
-<div id="painel-mensagem"></div>
-<div id="lista-pontos">Histórico</div>
-<div id="high-score">Maior Pontuação:0</div>
-<h3>Ranking Top 3</h3>
-<table id="ranking">
-  <thead>
-    <tr>
-      <th>Posição</th>
-      <th>Jogador</th>
-      <th>Pontuação</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-  </table>
-  <button id="limpar-historico">Limpar Histórico</button>
+    <div id="painel-controles">
+      <div>
+        Nome do Jogador: <input type="text" id="player-name" placeholder="Enter your Name">
+        <button id="start-game">▶️ Start Game</button>
+        <button id="novo-jogo">Novo Jogo</button>
+        <button id="toggle-music">Ligar/desligar Música</button>
+        <button id="facil">Modo Fácil</button>
+        <button id="medio">Modo Médio</button>
+        <button id="dificil">Modo Difícil</button>
+      </div>
+    </div>
+
+    <div id="painel-mensagem"></div>
+    <div id="lista-pontos">Histórico</div>
+    <div id="high-score">Maior Pontuação:0</div>
+    <h3>Ranking Top 3</h3>
+    <table id="ranking">
+      <thead>
+        <tr>
+          <th>Posição</th>
+          <th>Jogador</th>
+          <th>Pontuação</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="limpar-historico">Limpar Histórico</button>
+
     <div class="panel">
       <div class="panel-row">
-        <div class="square " id="1"></div>
+        <div class="square" id="1"></div>
         <div class="square" id="2"></div>
         <div class="square" id="3"></div>
       </div>
-
       <div class="panel-row">
         <div class="square enemy" id="4"></div>
         <div class="square" id="5"></div>
         <div class="square" id="6"></div>
       </div>
-
       <div class="panel-row">
         <div class="square" id="7"></div>
         <div class="square" id="8"></div>
         <div class="square" id="9"></div>
       </div>
     </div>
-    
   </div>
 
+  <!-- scripts -->
   <script defer src="engine.js"></script>
-  
-  
-
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js")
-      .then(() => console.log("Service Worker registrado!"))
-      .catch(err => console.error("Erro no Service Worker:", err));
-  }
-</script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker registrado!"))
+        .catch(err => console.error("Erro no Service Worker:", err));
+    }
+  </script>
 </body>
 </html>
