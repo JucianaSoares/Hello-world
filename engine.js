@@ -223,11 +223,17 @@ function gameOver() {
   state.values.gameOver = true;
   clearInterval(state.actions.countDownTimerId);
 
+  // limpa painel
+  state.view.painelMensagem.className = "";
+  state.view.painelMensagem.textContent = "";
+
   const msg = document.createElement("div");
   msg.classList.add("gameover");
   msg.textContent = "💀 GAME OVER 💀";
+
   state.view.painelMensagem.innerHTML = "";
   state.view.painelMensagem.appendChild(msg);
+
   playGameOverSound();
 
   // fade-out após alguns segundos
