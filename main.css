@@ -290,17 +290,20 @@ h3{color: #998F8F;}
 #painel-mensagem.facil {
   background-color: #4CAF50;
   color: #fff;
-  animation: pulse 2s infinite;
+  animation: pulse 2s 2, fadeOutMsg 1s forwards;
+  animation-delay: 0s, 4s;
 }
 #painel-mensagem.medio {
   background-color: #ffcc00;
   color: #000;
-  animation: pulse 1.5s infinite;
+  animation: pulse 1.5s 3, fadeOutMsg 1s forwards;
+  animation-delay: 0s, 4.5s;
 }
 #painel-mensagem.dificil {
   background-color: #e53935;
   color: #fff;
-  animation: pulse 1s infinite;
+  animation: pulse 1s 4, fadeOutMsg 1s forwards;
+  animation-delay: 0s, 4s; 
 }
 .mensagem{
   opacity: 0;
