@@ -103,6 +103,10 @@ function endGame() {
   clearInterval(state.actions.timerId);
   stopBackgroundMusic();
 
+  // ✅ Limpa painel de mensagem
+  state.view.painelMensagem.className = "";
+  state.view.painelMensagem.textContent = "";
+
   if (!state.values.gameOver) {
     state.values.gameOver = true;
     const playerName = state.view.playerNameInput.value || "Anônimo";
